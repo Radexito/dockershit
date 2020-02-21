@@ -18,6 +18,7 @@ VERSION_REV=`$SED -ne 's/^#define LIBLTC_REV *\([0-9]*\)/\1/p' ${srcdir}/src/ltc
 VERSION_AGE=`$SED -ne 's/^#define LIBLTC_AGE *\([0-9]*\)/\1/p' ${srcdir}/src/ltc.h 2>/dev/null`
 VERSION_INFO=${VERSION_CUR}:${VERSION_REV}:${VERSION_AGE}
 
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([src/ltc.c])
 AC_CONFIG_TESTDIR([tests])
 AC_CANONICAL_TARGET([])
