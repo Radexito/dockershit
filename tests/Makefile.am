@@ -8,7 +8,7 @@ EXTRA_DIST= \
 	expect_48k_2sec.txt expect_96k_2sec.txt
 
 LIBLTCDIR =../src
-INCLUDES = -I$(srcdir)/$(LIBLTCDIR)
+AM_CPPFLAGS = -I$(srcdir)/$(LIBLTCDIR)
 
 ltcdecode_SOURCES = ltcdecode.c
 ltcdecode_LDADD = $(LIBLTCDIR)/libltc.la -lm
